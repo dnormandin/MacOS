@@ -24,8 +24,8 @@
 ###############################################
 osascript -e 'tell application "Finder"
 	if not running then
-    	run
-    	delay 0.25
+    		run
+    		delay 0.25
 	end if
 	activate
 end tell'
@@ -50,7 +50,7 @@ do
 	   end if
 	end tell')
     
-    ##################################################
+    	##################################################
 	### Stop the script if Stop button is pressed. ###
 	##################################################
 	if [ $userPinNew == "Stop" ]; then
