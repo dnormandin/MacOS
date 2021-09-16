@@ -1,10 +1,10 @@
 #!/bin/bash
 
-###############################################################################################
-### Need to enure that Yubico-Piv-Tool is installed before running this script. ###############
-### This will change the old 123456 pin to the new pin ########################################
-### Also check to see if there is a capital letter, lowercase letter, and a number. ###########
-###############################################################################################
+################################################################################################
+### Need to enure that Yubico-Piv-Tool is installed before running this script. ################
+### This will change the old 123456 pin to the new pin. ########################################
+### Also check to see if there is a capital letter, lowercase letter, and a number. ############
+################################################################################################
 
 ##########################################################
 ### Variables you need to store in the script in JAMF. ###
