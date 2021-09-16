@@ -109,7 +109,7 @@ do
 						title='SmartCard/YubiKey Pin Not Set!'
 						osascript -e "display dialog \"The new pin you provided contains a special character!\n\nThe pin must contain:\n-A capital letter\n-A lowercase letter\n-A number\n\nAdditionally:\n-The pin MUST be exactly 8 characters\n-The pin CANNOT contain a special character\" buttons {\"OK\"} default button \"OK\" with title \"$title\""
 					else					
-	                    ##########################################
+	                    			##########################################
 						### Unlock PUK and change factory pin. ###
 						##########################################
 						yubico-piv-tool -achange-pin -P123456 -N$userPinNew
@@ -117,13 +117,13 @@ do
 	                    title='Pin & Textron/MyEric Password Required!'
 						osascript -e "display dialog \"The next two dialogs will ask you for your PIN & your Textron/MyEric Password.\n\nIf the two dialogs do NOT appear, then this SmartCard/YubiKey has already been paired to your profile.\n\nPlease press OK to continue.\" buttons {\"OK\"} default button \"OK\" with title \"$title\""
                     
-	                    ###################################
+	                    			###################################
 						### Pair SmartCard/YubiKey pin. ###
 						###################################
 						output=$(sc_auth pair -v -u $userName -h $yubiKeyHash | awk '{print $8 $9 $10 $11}')
 					
 						if [[ $output == *"SmartCardisalreadypaired."* ]]; then
-	                        ###################################################################
+	                        			###################################################################
 							### Inform user that the SmartCard / YubiKey is already paired. ###
 							###################################################################
 							title='SmartCard/YubiKey Already Paired!'
