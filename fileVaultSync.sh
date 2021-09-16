@@ -22,8 +22,8 @@ userName=$(/usr/bin/python -c 'from SystemConfiguration import SCDynamicStoreCop
 ###################################
 osascript -e 'tell application "Finder"
 	if not running then
-    	run
-    	delay 0.25
+    		run
+    		delay 0.25
 	end if
 	activate
 end tell'
@@ -50,7 +50,7 @@ output=$(sudo sysadminctl -adminUser "$adminUser" -adminPassword "$adminPassword
 ### Searches for the output "Done". If this exist then the sysadminctl command will execute. ###
 ################################################################################################
 if [[ $output == *"Done"* ]]; then
-	##############################################################################################################################
+    ##############################################################################################################################
     ### Command used to provide the user a secureToken. The admin user must have a secure token or this command will not work. ###
     ### You can always check the JAMF policy logs to see if the user is experiencing an issue. ###################################
     ##############################################################################################################################
