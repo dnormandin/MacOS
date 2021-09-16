@@ -54,7 +54,7 @@ if [[ $output == *"Done"* ]]; then
     ### Command used to provide the user a secureToken. The admin user must have a secure token or this command will not work. ###
     ### You can always check the JAMF policy logs to see if the user is experiencing an issue. ###################################
     ##############################################################################################################################
-	sudo sysadminctl -adminUser "$adminUser" -adminPassword "$adminPassword" -secureTokenOn $userName -password $userPassword
+    sudo sysadminctl -adminUser "$adminUser" -adminPassword "$adminPassword" -secureTokenOn $userName -password $userPassword
     
     ################################
     ### GUI dialog for the user. ###
@@ -62,14 +62,14 @@ if [[ $output == *"Done"* ]]; then
     title='MacOS FileVault Encryption'
 	osascript -e "display dialog \"Your password has been successfully synced with FileVault!\" buttons {\"OK\"} default button \"OK\" with title \"$title\""
 else
-	################################
+    ################################
     ### GUI dialog for the user. ###
     ################################
     title='MacOS FileVault Encryption'
 	osascript -e "display dialog \"The password entered did not match your password on this computer! Please quit and re-run the Self-Service policy to try again.\" buttons {\"Quit (Your password was not synced!)\"} default button \"Quit (Your password was not synced!)\" with title \"$title\""
 fi
 
-###############################
-### Change the userPassword ###
-###############################
+#########################################
+### Change the userPassword variable. ###
+#########################################
 userPassword="NiceTry"
