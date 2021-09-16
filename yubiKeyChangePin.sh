@@ -6,10 +6,10 @@
 ### Also check to see if there is a capital letter, lowercase letter, and a number. #####
 #########################################################################################
 
-###############################################################################################
-### Prompt the user to insert SmartCard/YubiKey, once inserted the prompt will go away ########
-### This will only run if there is a certificate on the SmartCard/YubiKey. ####################
-###############################################################################################
+################################################################################################
+### Prompt the user to insert SmartCard/YubiKey, once inserted the prompt will go away. ########
+### This will only run if there is a certificate on the SmartCard/YubiKey. #####################
+################################################################################################
 "/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper" \
 -windowType utility -title "SmartCard/YubiKey Not Detected!" -description "Please insert your SmartCard/YubiKey." \
 -alignDescription left -lockHUD & while [[ $( security list-smartcards 2>/dev/null \
