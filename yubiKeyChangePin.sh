@@ -20,8 +20,8 @@
 ###############################################
 osascript -e 'tell application "Finder"
 	if not running then
-    	run
-    	delay 0.25
+    		run
+    		delay 0.25
 	end if
 	activate
 end tell'
