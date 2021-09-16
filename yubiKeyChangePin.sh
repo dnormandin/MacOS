@@ -66,7 +66,7 @@ if [ $verifyOldPinEcho == "verifyied." ]; then
 		   		set userPinNew to the (text returned of the result)
 		   	else
 		   		set userPinNew to "Stop"
-		   	end if
+		   end if
 		end tell')
 
 		##################################################
