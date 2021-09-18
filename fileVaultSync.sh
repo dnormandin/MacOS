@@ -33,7 +33,7 @@ end tell'
 ################################################################################
 userPassword=$(osascript -e '
 tell application "Finder"
-   display dialog "Please enter your Textron/Computer/MyEric password." with hidden answer default answer ""
+   display dialog "Please enter your Computer password." with hidden answer default answer ""
    set userPassword to the (text returned of the result)
 end tell')
 
