@@ -12,9 +12,9 @@
 adminUser=$4
 adminPassword=$5
 
-###################################################################
-### This will store the logged in user's C badge to a variable. ###
-###################################################################
+#########################################################
+### This will store the logged in user to a variable. ###
+#########################################################
 userName=$(/usr/bin/python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");')
 
 ###################################
@@ -68,8 +68,3 @@ else
     title='MacOS FileVault Encryption'
 	osascript -e "display dialog \"The password entered did not match your password on this computer! Please quit and re-run the Self-Service policy to try again.\" buttons {\"Quit (Your password was not synced!)\"} default button \"Quit (Your password was not synced!)\" with title \"$title\""
 fi
-
-#########################################
-### Change the userPassword variable. ###
-#########################################
-userPassword="NiceTry"
